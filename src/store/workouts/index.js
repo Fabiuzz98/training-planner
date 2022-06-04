@@ -117,11 +117,9 @@ export default {
       const responseData = await response.json();
 
       if (!response.ok) {
-        const err = new Error(response.message);
+        const err = new Error(responseData.message);
         throw err;
       }
-
-     
     },
 
     async deleteWorkout(context, payload) {
