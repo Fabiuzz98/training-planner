@@ -27,6 +27,7 @@
     </div>
     <div class="workout-specific-details">
       <workout-specifics
+        :workoutType="currentWorkout.workoutType"
         :idWorkout="id"
         v-for="(specific, index) in currentWorkout.exercises"
         :key="index"

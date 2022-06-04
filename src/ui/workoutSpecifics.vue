@@ -28,17 +28,20 @@
         <input v-else type="text" v-model="name" />
       </div>
       <div class="column">
-        <h4>Sets</h4>
+        <h4 v-if="workoutType === 'strength'">Sets</h4>
+        <h4 v-else>Duration</h4>
         <p v-if="!showInput">{{ spec1 }}</p>
         <input v-else type="text" v-model="spec01" />
       </div>
       <div class="column">
-        <h4>Repetitions</h4>
+        <h4 v-if="workoutType === 'strength'">Repetitions</h4>
+        <h4 v-else>Distance</h4>
         <p v-if="!showInput">{{ spec2 }}</p>
         <input v-else type="text" v-model="spec02" />
       </div>
       <div class="column">
-        <h4>Weight (Kg)</h4>
+        <h4 v-if="workoutType === 'strength'">Weight (Kg)</h4>
+        <h4 v-else>Pace</h4>
         <p v-if="!showInput">{{ spec3 }}</p>
         <input v-else type="text" v-model="spec03" />
       </div>
@@ -49,7 +52,15 @@
 
 <script>
 export default {
-  props: ['exerciseName', 'spec1', 'spec2', 'spec3', 'id', 'idWorkout'],
+  props: [
+    'exerciseName',
+    'spec1',
+    'spec2',
+    'spec3',
+    'id',
+    'idWorkout',
+    'workoutType',
+  ],
   data() {
     return {
       showInput: null,
