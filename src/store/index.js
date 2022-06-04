@@ -18,7 +18,6 @@ const store = createStore({
     },
 
     setStorage(_, payload) {
-      console.log(payload.logoutDate);
       const userData = [payload.id, payload.token, payload.logoutDate];
       localStorage.setItem('userLoginData', JSON.stringify(userData));
     },
@@ -32,8 +31,6 @@ const store = createStore({
   },
   actions: {
     async signUp(context, payload) {
-      console.log(payload);
-
       const response = await fetch(
         'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB5z3ixxb0EXbzCwemqjZeGoQDU_BeHCSM',
         {

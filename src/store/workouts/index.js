@@ -79,7 +79,6 @@ export default {
       }
 
       if (workouts.length === 0) return;
-      console.log(workouts);
 
       context.commit('addNewWorkout', workouts);
     },
@@ -122,7 +121,7 @@ export default {
         throw err;
       }
 
-      console.log(responseData);
+     
     },
 
     async deleteWorkout(context, payload) {
