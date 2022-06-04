@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 dist
+API_keys.txt
 
 
 # local env files

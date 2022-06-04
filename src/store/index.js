@@ -1,6 +1,9 @@
 import { createStore } from 'vuex';
 import workoutsModule from './workouts/index.js';
 import router from '../router.js';
+import STORED_API_KEY from '../API_keys.txt';
+
+const API_KEY = STORED_API_KEY;
 
 const store = createStore({
   modules: { workoutModule: workoutsModule },
@@ -32,7 +35,7 @@ const store = createStore({
   actions: {
     async signUp(context, payload) {
       const response = await fetch(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB5z3ixxb0EXbzCwemqjZeGoQDU_BeHCSM',
+        `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`,
         {
           method: 'POST',
           body: JSON.stringify({
@@ -70,7 +73,7 @@ const store = createStore({
 
     async login(context, payload) {
       const response = await fetch(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB5z3ixxb0EXbzCwemqjZeGoQDU_BeHCSM',
+        `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`,
         {
           method: 'POST',
           body: JSON.stringify({
