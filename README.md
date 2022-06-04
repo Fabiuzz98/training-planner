@@ -4,7 +4,7 @@ BUILT WITH: <br>
 This application is fully responsive and has been made with Vue-js, HTML, SCSS and Firebase for the backend.
 
 TRY THIS APP HERE: <br>
-... in process
+https://training-planner-fabio.netlify.app/home
 
 DESCRIPTION OF THE APP: <br>
 This app allows unauthenticated users to see the list of workouts and by clicking on them their details. <br>
