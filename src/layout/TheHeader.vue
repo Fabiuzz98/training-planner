@@ -91,7 +91,10 @@
           >
         </li>
         <li>
-          <router-link class="link" :to="{ name: 'authenticationPage' }"
+          <router-link
+            class="link"
+            v-if="!isAuthenticated"
+            :to="{ name: 'authenticationPage' }"
             >Login</router-link
           >
         </li>
