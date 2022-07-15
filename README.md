@@ -1,13 +1,13 @@
 # training-planner
 
 BUILT WITH: <br>
-This application is fully responsive and has been made with Vue-js, HTML, SCSS and Firebase for the backend.
+This application is fully responsive and has been made with Vue-js,vuex, vue-router, HTML, SCSS and Firebase for the backend.
 
 TRY THIS APP HERE: <br>
 https://training-planner-fabio.netlify.app/home
 
 DESCRIPTION OF THE APP: <br>
-This app allows unauthenticated users to see the list of workouts and by clicking on them their details. <br>
+This app allows unauthenticated users to see the list of workouts and by clicking on them, their details. <br>
 The user has the possibility to register and thus obtain the authorization to create a new workout choosing between two types: cardio or strength.
 Based on the workout type chosen will then appear a different form to fill in. It's also possible to add more than one exercise for each workout. <br>
 At this point the created workout will appear in the home page where you can click on it and based on if you're authenticated or not, it's possible to make changes at the exercises by updating them or even delete the entire workout. <br>
